@@ -91,6 +91,18 @@ public class TivooSystem {
 			    events = parseGoogleEvent(root);
 				
 			}
+			else if (fileName.equals("resources/googlecal.xml")) {
+			    events = parseGoogleEvent(root);
+				
+			}
+			else if (fileName.equals("resources/NFL.xml")) {
+			    events = parseGoogleEvent(root);
+				
+			}
+			else if (fileName.equals("resources/DukeBasketBall.xml")) {
+			    events = parseGoogleEvent(root);
+				
+			}
 			else
 				throw new Error("This calendar type is not recognized.");
 			
@@ -238,13 +250,13 @@ public class TivooSystem {
 	}
 
 	
-	public void outputSummary(ArrayList<Event> list)
+/*	public void outputSummary(ArrayList<Event> list)
 	{
 		com.hp.gagawa.java.Document document = new com.hp.gagawa.java.Document(DocumentType.XHTMLTransitional);
 		document.head.appendChild(new Title().appendChild(new Text("Calendar Summary")));
         Body body = document.body;
         
-	}
+	}   */
 	public void displaySummary(Stack<Element> events, String nodeTitle) throws IOException {
 		Div document = new Div();
 		
